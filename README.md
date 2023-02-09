@@ -2,6 +2,13 @@
 
 ## This app helps you organize your life by adding your daily tasks to the list. You can mark them as done and delete them whenever you want.
 
+### How to use it? Demo below ;)
+
+![gif](./src/usageDemo.gif)
+
+### Website
+
+https://adachkamil98.github.io/ToDoList/
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
