@@ -8,7 +8,7 @@
 
 ### Website
 
-https://adachkamil98.github.io/ToDoList/
+https://adachkamil98.github.io/todos-list-react/
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
