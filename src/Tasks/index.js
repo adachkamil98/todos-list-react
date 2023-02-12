@@ -6,16 +6,16 @@ const Tasks = ({ tasks, hideDoneTasks }) => (
       <li
         key={task.id}
         className=
-        {`list list__item ${task.done && hideDoneTasks ? "list__item--hidden" : ""}`}
+        {`list__item ${task.done && hideDoneTasks ? "list__item--hidden" : ""}`}
       >
 
-        <button className="list__toggleStatusButton">
+        <button className="list__button list__button--toggleStatusButton">
           {task.done ? "✔" : ""}
         </button>
-        <span className={`list ${task.done ? "list__taskDone" : "list"}`}>
+        <span className={`list__taskContent ${task.done ? "list__taskDone" : "list__taskContent"}`}>
           {task.content}
         </span>
-        <button className="list__clearButton">
+        <button className="list__button list__button--clearButton">
           🗑️
         </button>
       </li>

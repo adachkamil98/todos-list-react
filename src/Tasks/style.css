@@ -22,13 +22,18 @@
     text-decoration: line-through;
 }
 
-.list__clearButton {
+.list__taskContent {
+    background-color: white;
+    margin: 0px;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.list__button {
     display: grid;
     align-self: center;
     height: 30px;
     width: 30px;
-    padding: 6px 5px 5px 4px;
-    background-color: hsl(0, 80%, 31%);
     color: white;
     border: none;
     border-radius: 2px;
@@ -36,32 +41,29 @@
     transition: background-color 1000ms;
 }
 
-.list__clearButton:hover {
+.list__button--clearButton {
+    padding: 6px 5px 5px 4px;
+    background-color: hsl(0, 80%, 31%);
+
+}
+
+.list__button--clearButton:hover {
     background-color: hsl(0, 80%, 38%);
 }
 
-.list__clearButton:active {
+.list__button--clearButton:active {
     background-color: hsl(0, 80%, 47%);
 }
 
-.list__toggleStatusButton {
-    display: grid;
-    align-self: center;
+.list__button--toggleStatusButton {
     padding: 5px;
-    height: 30px;
-    width: 30px;
     background-color: hsl(103, 80%, 30%);
-    color: white;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: background-color 1000ms;
 }
 
-.list__toggleStatusButton:hover {
+.list__button--toggleStatusButton:hover {
     background-color: hsl(103, 80%, 40%);
 }
 
-.list__toggleStatusButton:active {
+.list__button--toggleStatusButton:active {
     background-color: hsl(103, 80%, 45%);
 }

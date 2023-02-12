@@ -17,6 +17,8 @@
 - JS
 - React
 - Babel
+- Webpack
+- create-react-app
 - BEM convention
 
 ## Getting Started with Create React App
