@@ -1,6 +1,6 @@
 # ToDoList
 
-## This app helps you organize your life by adding your daily tasks to the list. You can mark them as done and delete them whenever you want.
+## This app helps you organize your life by adding your daily tasks to the list. You can mark them as done and delete them whenever you want
 
 ## Demo
 
