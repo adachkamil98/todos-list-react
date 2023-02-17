@@ -14,7 +14,7 @@ const Form = ({ addNewTask }) => {
       addNewTask(newTaskContent.trim())
     };
     setNewTaskContent("");
-  }
+  };
 
   return (
     <form
@@ -32,7 +32,7 @@ const Form = ({ addNewTask }) => {
       />
       <button className="form__addButton">Dodaj zadanie</button>
     </form>
-  )
+  );
 };
 
 export default Form;
