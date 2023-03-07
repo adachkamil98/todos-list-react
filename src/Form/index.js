@@ -1,5 +1,5 @@
-import { useState } from "react"
-import "./style.css";
+import { useState } from "react";
+import { TasksForm, Input, AddButton } from "./styled.js";
 
 const Form = ({ addNewTask }) => {
   const [newTaskContent, setNewTaskContent] = useState("");
@@ -7,31 +7,27 @@ const Form = ({ addNewTask }) => {
   const onFormSubmit = (event) => {
     event.preventDefault();
     if (newTaskContent.trim() === "") {
-      setNewTaskContent("")
+      setNewTaskContent("");
       return;
-
     } else {
-      addNewTask(newTaskContent.trim())
-    };
+      addNewTask(newTaskContent.trim());
+    }
     setNewTaskContent("");
   };
 
   return (
-    <form
-      className="form"
-      type="input"
-      onSubmit={onFormSubmit}
-    >
-      <input
+    <TasksForm type="input" onSubmit={onFormSubmit}>
+      <Input
         value={newTaskContent}
-        className="form__input"
         type="text"
         name="tasks"
         placeholder="Co jest do zrobienia?"
-        onChange={({ target }) => setNewTaskContent(target.value)}
+        onChange={({ target }) =>
+          setNewTaskContent(target.value)
+        }
       />
-      <button className="form__addButton">Dodaj zadanie</button>
-    </form>
+      <AddButton>Dodaj zadanie</AddButton>
+    </TasksForm>
   );
 };
 
