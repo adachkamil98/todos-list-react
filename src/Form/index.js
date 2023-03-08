@@ -4,19 +4,20 @@ import { TasksForm, Input, AddButton } from "./styled.js";
 const Form = ({ addNewTask }) => {
   const [newTaskContent, setNewTaskContent] = useState("");
   const inputRef = useRef(null);
+
   const focusInput = () => inputRef.current.focus();
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    if (newTaskContent.trim() === "") {
-      setNewTaskContent("");
-      return;
-    } else {
-      addNewTask(newTaskContent.trim());
+
+    const trimmedTaskContent = newTaskContent.trim();
+
+    if (trimmedTaskContent !== "") {
+      addNewTask(trimmedTaskContent);
     }
 
     setNewTaskContent("");
-    };
+  };
 
   return (
     <TasksForm type="input" onSubmit={onFormSubmit}>

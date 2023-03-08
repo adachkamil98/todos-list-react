@@ -1,11 +1,15 @@
-import {ButtonsContainer, Button} from "./styled.js";
+import { ButtonsContainer, Button } from "./styled.js";
 
-const Buttons = ({ tasks, hideDone, toggleHideDone, setAllTasksAsDone }) => (
+const Buttons = ({
+  tasks,
+  hideDone,
+  toggleHideDone,
+  setAllTasksAsDone,
+}) => (
   <ButtonsContainer>
     {tasks.length > 0 && (
       <>
-        <Button
-          onClick={toggleHideDone}>
+        <Button onClick={toggleHideDone}>
           {hideDone ? "Pokaż" : "Ukryj"} ukończone
         </Button>
         <Button
