@@ -18,6 +18,7 @@
 - CSS
 - JS
 - React
+- custom Hooks
 - Babel
 - Webpack
 - create-react-app
