@@ -1,26 +1,21 @@
-import { ButtonsContainer, Button } from "./styled.js";
+import { Wrapper as Wrapper, Button } from "./styled.js";
 
-const Buttons = ({
-  tasks,
-  hideDone,
-  toggleHideDone,
-  setAllTasksAsDone,
-}) => (
-  <ButtonsContainer>
+const Buttons = ({ tasks, hideDone, toggleHideDone, setAllTasksAsDone }) => (
+  <Wrapper>
     {tasks.length > 0 && (
       <>
         <Button onClick={toggleHideDone}>
           {hideDone ? "Pokaż" : "Ukryj"} ukończone
         </Button>
-        <Button
-          onClick={setAllTasksAsDone}
-          disabled={tasks.every(({ done }) => done)}
+        <Button 
+        onClick={setAllTasksAsDone} 
+        disabled={tasks.every(({ done }) => done)}
         >
           Ukończ wszystkie
         </Button>
       </>
     )}
-  </ButtonsContainer>
+  </Wrapper>
 );
 
 export default Buttons;

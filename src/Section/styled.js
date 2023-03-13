@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const HeaderSection = styled.section`
-  background-color: white;
-  border-bottom: #f2f2f2 solid 5px;
+export const Wrapper = styled.section`
+  background-color: ${({ theme }) => theme.color.white};
+  border-bottom: ${({ theme }) => theme.color.concrete} solid 5px;
 `;
 
 export const Header = styled.header`
@@ -11,10 +11,10 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  border-bottom: #f2f2f2 solid 2px;
+  border-bottom: ${({ theme }) => theme.color.concrete} solid 2px;
   margin: 0px;
 
-  @media (max-width: 767px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     grid-template-columns: 1fr;
   }
 `;

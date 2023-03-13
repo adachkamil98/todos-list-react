@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { TasksForm, Input, AddButton } from "./styled.js";
+import { StyledForm, Input, AddButton } from "./styled.js";
 
 const Form = ({ addNewTask }) => {
   const [newTaskContent, setNewTaskContent] = useState("");
@@ -20,19 +20,17 @@ const Form = ({ addNewTask }) => {
   };
 
   return (
-    <TasksForm type="input" onSubmit={onFormSubmit}>
+    <StyledForm type="input" onSubmit={onFormSubmit}>
       <Input
         ref={inputRef}
         value={newTaskContent}
         type="text"
         name="tasks"
         placeholder="Co jest do zrobienia?"
-        onChange={({ target }) =>
-          setNewTaskContent(target.value)
-        }
+        onChange={({ target }) => setNewTaskContent(target.value)}
       />
       <AddButton onClick={focusInput}>Dodaj zadanie</AddButton>
-    </TasksForm>
+    </StyledForm>
   );
 };
 
