@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MainHeader = styled.header`
+export const Wrapper = styled.header`
   margin: 0px;
   margin-bottom: 15px;
 `;
