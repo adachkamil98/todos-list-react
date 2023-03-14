@@ -19,6 +19,7 @@
 - JS
 - React
 - custom Hooks
+- styled-components
 - Babel
 - Webpack
 - create-react-app

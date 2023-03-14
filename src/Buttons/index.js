@@ -1,4 +1,4 @@
-import { Wrapper as Wrapper, Button } from "./styled.js";
+import { Wrapper, Button } from "./styled.js";
 
 const Buttons = ({ tasks, hideDone, toggleHideDone, setAllTasksAsDone }) => (
   <Wrapper>

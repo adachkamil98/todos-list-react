@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 
+const getInitialTasks = () => {
+  const tasksFromLocalStorage = localStorage.getItem("todos");
+
+  return tasksFromLocalStorage ? JSON.parse(tasksFromLocalStorage) : [];
+};
+
 export const useTasks = () => {
-  const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("todos")) || []
-  );
+  const [tasks, setTasks] = useState(getInitialTasks);
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(tasks));
@@ -15,9 +19,7 @@ export const useTasks = () => {
 
   const toggleTaskDone = (id) => {
     setTasks((tasks) =>
-      tasks.map((task) =>
-        task.id === id ? { ...task, done: !task.done } : task
-      )
+      tasks.map((task) => (task.id === id ? { ...task, done: !task.done } : task))
     );
   };
 
