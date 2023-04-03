@@ -6,7 +6,7 @@
 
 [ToDoList](https://adachkamil98.github.io/todos-list-react/)
 
-## How to use it? Demo below ;)
+## How to use it? Demo below 😊
 
 ![gif](./usageDemo.gif)
 
