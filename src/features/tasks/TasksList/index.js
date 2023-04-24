@@ -5,7 +5,7 @@ import {
   removeTask,
   selectHideDone,
 } from "../tasksSlice.js";
-import { List, Item, TaskContent, Button } from "./styled.js";
+import { List, Item, TaskContent, Button } from "../styled.js";
 
 const TasksList = () => {
   const tasks = useSelector(selectTasks);
