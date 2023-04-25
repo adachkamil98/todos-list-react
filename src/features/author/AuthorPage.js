@@ -26,7 +26,7 @@ const AuthorPage = () => {
     <Container>
       <Wrapper>
         <Header title="O autorze" />
-        <FrontPhoto src={process.env.PUBLIC_URL + '/IMG20220511135451.jpg'} />
+        <FrontPhoto src={process.env.PUBLIC_URL + "/IMG20220511135451.jpg"} />
       </Wrapper>
       <Section
         title="Kamil Adach"
@@ -76,7 +76,10 @@ const AuthorPage = () => {
               >
                 Hang massive - Once again{" "}
               </SectionLink>
-              <HandPanPhoto src={process.env.PUBLIC_URL + '/Handpan.jpg'} alt="Muzyk grający na Handpanach" />
+              <HandPanPhoto
+                src={process.env.PUBLIC_URL + "/Handpan.jpg"}
+                alt="Muzyk grający na Handpanach"
+              />
               <StyledTable>
                 <TableCaption>
                   <b>Moje ulubione utwory</b>

@@ -14,7 +14,7 @@ const Buttons = () => {
   const hideDone = useSelector(selectHideDone);
 
   const dispatch = useDispatch();
-  
+
   return (
     <Wrapper>
       {!areTasksEmpty && (
