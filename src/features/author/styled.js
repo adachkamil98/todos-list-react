@@ -7,7 +7,6 @@ export const Content = styled.div`
   max-width: 1200px;
   margin: auto;
   word-spacing: 2px;
-  line-height: 170%;
   text-align: center;
 `;
 export const FlexContainer = styled.div`
@@ -39,7 +38,6 @@ export const FlexItem = styled.header`
 export const StyledTable = styled.table`
   color: black;
   margin: auto;
-  width: 100%;
   border-radius: 50px;
 `;
 
@@ -55,7 +53,8 @@ export const TableHeader = styled.th`
   vertical-align: middle;
   font-weight: bold;
   background-color: rgb(250, 230, 190);
-  padding: 5px;
+  padding: 10px;
+  min-width: 90px;
 
   ${({ upLeftRounded }) =>
     upLeftRounded &&
@@ -67,6 +66,8 @@ export const TableHeader = styled.th`
     upRightRounded &&
     css`
       border-radius: 0 10px 0 0;
+      padding-left: 5px;
+      padding-right: 5px;
     `}
 `;
 
@@ -78,7 +79,7 @@ export const TableData = styled.td`
 `;
 
 export const TableRow = styled.tr`
-  &:nth-child(even) {
+  &:nth-child(odd) {
     background-color: #eeeeee;
   }
   &:hover {
@@ -89,11 +90,11 @@ export const TableRow = styled.tr`
 export const SectionLink = styled.a`
   display: inline-block;
   padding: 5px;
+  text-decoration: none;
 `;
 
 export const TableLink = styled.a`
-  padding: 2px 5px;
-  margin: 5px;
+  text-decoration: none;
 `;
 
 export const SubHeader = styled.h3`
@@ -111,4 +112,19 @@ export const HandPanPhoto = styled.img`
   height: fit-content;
   padding: 10px;
   border-radius: 50px;
+`;
+
+export const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  grid-gap: 10px;
+`;
+
+export const FrontPhoto = styled.img`
+  margin: auto;
+  display: grid;
+  width: 100px;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 50%;
 `;

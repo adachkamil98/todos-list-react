@@ -2,7 +2,7 @@ import Container from "../../common/Container";
 import Header from "../../common/Header";
 import Section from "../../common/Section";
 import { Title } from "../../common/Section/styled";
-import { Item, List } from "../tasks/styled";
+import { Item, List } from "../tasks/TasksPage/styled";
 import {
   Content,
   FlexContainer,
@@ -17,14 +17,17 @@ import {
   TableHeader,
   TableLink,
   TableRow,
+  FrontPhoto,
+  Wrapper,
 } from "./styled";
 
-import HandpanPhoto from "./Handpan.jpg";
-
-const Author = () => {
+const AuthorPage = () => {
   return (
     <Container>
-      <Header title="O autorze" />
+      <Wrapper>
+        <Header title="O autorze" />
+        <FrontPhoto src={process.env.PUBLIC_URL + '/IMG20220511135451.jpg'} />
+      </Wrapper>
       <Section
         title="Kamil Adach"
         body={
@@ -73,19 +76,22 @@ const Author = () => {
               >
                 Hang massive - Once again{" "}
               </SectionLink>
-              <HandPanPhoto src={HandpanPhoto} alt="Muzyk grający na Handpanach" />
+              <HandPanPhoto src={process.env.PUBLIC_URL + '/Handpan.jpg'} alt="Muzyk grający na Handpanach" />
               <StyledTable>
                 <TableCaption>
                   <b>Moje ulubione utwory</b>
                 </TableCaption>
-
                 <TableRow>
-                  <TableHeader scope="col" upLeftRounded>Title</TableHeader>
+                  <TableHeader scope="col" upLeftRounded>
+                    Title
+                  </TableHeader>
                   <TableHeader scope="col">Artist</TableHeader>
                   <TableHeader scope="col">Released</TableHeader>
                   <TableHeader scope="col">Album</TableHeader>
                   <TableHeader scope="col">Genres</TableHeader>
-                  <TableHeader scope="col" upRightRounded>Link</TableHeader>
+                  <TableHeader scope="col" upRightRounded>
+                    Link
+                  </TableHeader>
                 </TableRow>
                 <TableRow>
                   <TableHeader>Take five</TableHeader>
@@ -158,8 +164,10 @@ const Author = () => {
                   <TableHeader>Highway to Hell</TableHeader>
                   <TableData>ACDC</TableData>
                   <TableData>1979</TableData>
-                  <TableData bottomLeftRounded>Highway to Hell</TableData>
-                  <TableData>Hard Rock, Rock & Roll, Blues Rock</TableData>
+                  <TableData>Highway to Hell</TableData>
+                  <TableData>
+                    Hard Rock, Rock & Roll, <br></br>Blues Rock
+                  </TableData>
                   <TableData>
                     <TableLink
                       href="https://www.youtube.com/watch?v=l482T0yNkeo"
@@ -177,7 +185,7 @@ const Author = () => {
               <Title>Plany i marzenia</Title>
               <SubHeader>Plany</SubHeader>
               <SubHeaderParagraph>
-                W ciągu najlbiższych kilku miesięcy chcę ukończyć kurs od szkoły
+                W ciągu najlbiższych kilku tygodni chcę ukończyć kurs od szkoły
                 programowania YouCode i zawodowo zajmować się Frontendem. Z tygodnia na
                 tydzień jestem coraz bliżej celu. Gdy będę już programistą, zbuduję drugie
                 źródło dochodów z wynajmu nieruchomości. Moim hobby będzie dbanie o zdrowe
@@ -226,4 +234,4 @@ const Author = () => {
   );
 };
 
-export default Author;
+export default AuthorPage;

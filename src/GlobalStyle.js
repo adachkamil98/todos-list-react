@@ -12,7 +12,6 @@ export const GlobalStyle = createGlobalStyle`
 
 	body {  
   	background-color: ${({ theme }) => theme.color.concrete};
-  	margin: 15px;
-  	padding: 5px;
+  	margin: auto;
 	}
 `;

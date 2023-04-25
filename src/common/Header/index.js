@@ -1,9 +1,5 @@
-import { Wrapper, Title } from "./styled.js";
+import { Title } from "./styled.js";
 
-const Header = ({ title }) => (
-  <Wrapper>
-    <Title>{title}</Title>
-  </Wrapper>
-);
+const Header = ({ title }) => <Title>{title}</Title>;
 
 export default Header;

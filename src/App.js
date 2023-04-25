@@ -1,29 +1,37 @@
 import React from "react";
-import Tasks from "./features/tasks/Tasks";
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
-import Author from "./features/author/Author.js";
+import TasksPage from "./features/tasks/TasksPage";
+import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
+import AuthorPage from "./features/author/AuthorPage.js";
+import { NavbarContainer, NavbarItem, StyledLink } from "./styled";
+import TaskPage from "./features/tasks/TaskPage";
 
 const App = () => (
-    <BrowserRouter>
+  <HashRouter>
     <nav>
-        <ul>
-            <li>
-                <Link to="/zadania">Zadania</Link>
-            </li>
-            <li>
-                <Link to="/autor">Autor</Link>
-            </li>
-        </ul>
-        <Switch>
-            <Route path="/zadania">
-                <Tasks />
-            </Route>
-            <Route path="/autor">
-                <Author />
-            </Route>
-        </Switch>
+      <NavbarContainer>
+        <NavbarItem>
+          <StyledLink to="/zadania">Zadania</StyledLink>
+        </NavbarItem>
+        <NavbarItem>
+          <StyledLink to="/autor">Autor</StyledLink>
+        </NavbarItem>
+      </NavbarContainer>
+      <Switch>
+        <Route path="/zadania/:id">
+          <TaskPage />
+        </Route>
+        <Route path="/zadania">
+          <TasksPage />
+        </Route>
+        <Route path="/autor">
+          <AuthorPage />
+        </Route>
+        <Route path="/">
+            <Redirect to="/zadania"/>
+        </Route>
+      </Switch>
     </nav>
-    </BrowserRouter>
+  </HashRouter>
 );
 
 export default App;

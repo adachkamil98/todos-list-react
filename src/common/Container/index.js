@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 const Container = styled.main`
-  max-width: 1000px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0px 20px;
   word-break: break-word;
 `;
 

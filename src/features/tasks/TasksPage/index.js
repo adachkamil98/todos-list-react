@@ -1,12 +1,12 @@
 import Form from "./Form";
-import Buttons from "../../Buttons";
-import Section from "../../common/Section";
-import Header from "../../common/Header";
-import Container from "../../common/Container";
+import Buttons from "../../../Buttons";
+import Section from "../../../common/Section";
+import Header from "../../../common/Header";
+import Container from "../../../common/Container";
 import TasksList from "./TasksList";
-import FetchExampleTasksButton from "../../Buttons/fetchExampleTasks/index.js";
+import FetchExampleTasksButton from "../../../Buttons/fetchExampleTasks/index.js";
 
-function Tasks() {
+function TasksPage() {
   return (
     <Container>
       <Header title="Lista zadań" />
@@ -24,4 +24,4 @@ function Tasks() {
   );
 }
 
-export default Tasks;
+export default TasksPage;
