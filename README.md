@@ -12,15 +12,17 @@
 
 ## Technologies used
 
-<img src="./icons/html.png" alt="HTML" width="50"> <img src="./icons/css-3.png" alt="CSS" width="50"> <img src="./icons/js.png" alt="JS" width="50"> <img src="./icons/react.png" alt="React" width="50"> <img src="./icons/babel.png" alt="Babel" width="50"> <img src="./icons/webpack.png" alt="Webpack" width="50"> <img src="./icons/redux-logo.png" alt="Redux" width="50">
+<img src="./icons/html.png" alt="HTML" width="50"> <img src="./icons/css-3.png" alt="CSS" width="50"> <img src="./icons/js.png" alt="JS" width="50"> <img src="./icons/react.png" alt="React" width="50"> <img src="./icons/babel.png" alt="Babel" width="50"> <img src="./icons/webpack.png" alt="Webpack" width="50"> <img src="./icons/redux-logo.png" alt="Redux" width="50"> <img src="./icons/redux-Saga-Logo-Portrait.png" alt="Redux" width="50"> <img src="./icons/react-router-mark-color.png" alt="Redux" width="50">
 
 - HTML
 - CSS
 - JS
 - React
+- React Router
 - custom Hooks
 - styled-components
-- redux
+- Redux
+- Redux-Saga
 - Babel
 - Webpack
 - create-react-app

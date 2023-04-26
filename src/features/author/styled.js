@@ -53,7 +53,7 @@ export const TableHeader = styled.th`
   vertical-align: middle;
   font-weight: bold;
   background-color: ${({ theme }) => theme.color.dairyCream};
-  padding: 10px;
+  padding: 10px 5px;
   min-width: 90px;
 
   ${({ upLeftRounded }) =>
@@ -88,9 +88,18 @@ export const TableRow = styled.tr`
 `;
 
 export const SectionLink = styled.a`
-  display: inline-block;
-  padding: 5px;
+  color: ${({ theme }) => theme.color.teal};
   text-decoration: none;
+  transition: filter 800ms;
+
+  &:visited {
+    color: ${({ theme }) => theme.color.tamarillo};
+  }
+
+  &:hover {
+    filter: brightness(130%);
+    cursor: pointer;
+  }
 `;
 
 export const TableLink = styled.a`
