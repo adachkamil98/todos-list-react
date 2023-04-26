@@ -27,4 +27,4 @@ function* saveTasksInLocalStorageHandler() {
 export function* tasksSaga() {
   yield takeLatest(fetchExampleTasks.type, fetchExampleTasksHandler);
   yield takeEvery("*", saveTasksInLocalStorageHandler);
-} //gwiazdka oznacza odpalanie się handlera dla obojętnie jakiej akcji
+}

@@ -13,9 +13,9 @@ const Spinner = styled.div`
   display: inline-block;
   animation: ${rotate360} 700ms linear infinite;
   transform: translateZ(0px);
-  border-top: 3px solid grey;
-  border-right: 3px solid grey;
-  border-bottom: 3px solid grey;
+  border-top: 3px solid ${({ theme }) => theme.color.concrete};
+  border-right: 3px solid ${({ theme }) => theme.color.concrete};
+  border-bottom: 3px solid ${({ theme }) => theme.color.concrete};
   border-left: 4px solid teal;
   background: transparent;
   width: 25px;

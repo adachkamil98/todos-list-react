@@ -12,12 +12,6 @@ export const StyledForm = styled.form`
   }
 `;
 
-export const Input = styled.input`
-  border: rgb(151, 151, 151) solid 1px;
-  border-radius: 1px;
-  padding: 10px;
-`;
-
 export const AddButton = styled.button`
   color: ${({ theme }) => theme.color.white};
   background-color: ${({ theme }) => theme.color.teal};

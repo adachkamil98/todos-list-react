@@ -1,11 +1,10 @@
-
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const NavbarContainer = styled.nav`
   width: 100%;
   height: auto;
-  background-color: teal;
+  background-color: ${({ theme }) => theme.color.teal};
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -14,14 +13,25 @@ export const NavbarContainer = styled.nav`
 `;
 
 export const NavbarItem = styled.li`
+  background-color: ${({ theme }) => theme.color.teal};
   display: flex;
   text-decoration: none;
-  padding: 15px;
-  
+  padding: 5px;
+  transition: filter 500ms;
+
+  &:hover {
+    filter: brightness(110%);
+  }
 `;
 
-export const StyledLink = styled(Link)`
-display: flex;
-color: white;
-text-decoration: none;
-`
+export const StyledNavLink = styled(NavLink)`
+  display: flex;
+  padding: 10px;
+  color: ${({ theme }) => theme.color.white};
+  text-decoration: none;
+  cursor: pointer;
+
+  &.active {
+    color: ${({ theme }) => theme.color.black};
+  }
+`;

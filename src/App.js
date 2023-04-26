@@ -2,7 +2,7 @@ import React from "react";
 import TasksPage from "./features/tasks/TasksPage";
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import AuthorPage from "./features/author/AuthorPage.js";
-import { NavbarContainer, NavbarItem, StyledLink } from "./styled";
+import { NavbarContainer, NavbarItem, StyledNavLink } from "./styled";
 import TaskPage from "./features/tasks/TaskPage";
 
 const App = () => (
@@ -10,10 +10,10 @@ const App = () => (
     <nav>
       <NavbarContainer>
         <NavbarItem>
-          <StyledLink to="/zadania">Zadania</StyledLink>
+          <StyledNavLink to="/zadania">Zadania</StyledNavLink>
         </NavbarItem>
         <NavbarItem>
-          <StyledLink to="/autor">Autor</StyledLink>
+          <StyledNavLink to="/autor">Autor</StyledNavLink>
         </NavbarItem>
       </NavbarContainer>
       <Switch>

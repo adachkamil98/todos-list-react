@@ -5,6 +5,8 @@ import Header from "../../../common/Header";
 import Container from "../../../common/Container";
 import TasksList from "./TasksList";
 import FetchExampleTasksButton from "../../../Buttons/fetchExampleTasks/index.js";
+import Search from "./Search";
+
 
 function TasksPage() {
   return (
@@ -14,6 +16,10 @@ function TasksPage() {
         title="Dodaj nowe zadanie"
         extraHeaderContent={<FetchExampleTasksButton />}
         body={<Form />}
+      />
+      <Section
+        title="Wyszukiwarka"
+        body={<Search />}
       />
       <Section
         title="Lista zadań"

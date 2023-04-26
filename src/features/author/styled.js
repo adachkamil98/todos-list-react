@@ -36,7 +36,7 @@ export const FlexItem = styled.header`
 `;
 
 export const StyledTable = styled.table`
-  color: black;
+  color: ${({ theme }) => theme.color.black};
   margin: auto;
   border-radius: 50px;
 `;
@@ -52,7 +52,7 @@ export const TableHeader = styled.th`
   text-align: center;
   vertical-align: middle;
   font-weight: bold;
-  background-color: rgb(250, 230, 190);
+  background-color: ${({ theme }) => theme.color.dairyCream};
   padding: 10px;
   min-width: 90px;
 
@@ -80,10 +80,10 @@ export const TableData = styled.td`
 
 export const TableRow = styled.tr`
   &:nth-child(odd) {
-    background-color: #eeeeee;
+    background-color: ${({ theme }) => theme.color.gallery};
   }
   &:hover {
-    background-color: rgb(260, 230, 165);
+    background-color: ${({ theme }) => theme.color.barleyWhite};
   }
 `;
 
@@ -94,7 +94,18 @@ export const SectionLink = styled.a`
 `;
 
 export const TableLink = styled.a`
+  color: ${({ theme }) => theme.color.teal};
   text-decoration: none;
+  transition: filter 800ms;
+
+  &:visited {
+    color: ${({ theme }) => theme.color.tamarillo};
+  }
+
+  &:hover {
+    filter: brightness(130%);
+    cursor: pointer;
+  }
 `;
 
 export const SubHeader = styled.h3`
