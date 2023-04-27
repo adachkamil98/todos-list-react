@@ -1,8 +1,8 @@
 import { Button } from "../styled";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchExampleTasks, selectLoading } from "../../features/tasks/tasksSlice";
 import { Spinner } from "./LoadingSpinner";
 import { Wrapper } from "./styled";
+import { fetchExampleTasks, selectLoading } from "../../../tasksSlice";
 
 const FetchExampleTasksButton = () => {
   const dispatch = useDispatch();

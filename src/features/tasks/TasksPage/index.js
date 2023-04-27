@@ -1,11 +1,11 @@
 import Form from "./Form";
-import Buttons from "../../../Buttons";
+import Buttons from "./Buttons";
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import Container from "../../../common/Container";
 import TasksList from "./TasksList";
-import FetchExampleTasksButton from "../../../Buttons/fetchExampleTasks/index.js";
 import Search from "./Search";
+import FetchExampleTasksButton from "./Buttons/fetchExampleTasks";
 
 
 const TasksPage = () => {
