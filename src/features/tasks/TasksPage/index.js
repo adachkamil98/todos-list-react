@@ -8,7 +8,7 @@ import FetchExampleTasksButton from "../../../Buttons/fetchExampleTasks/index.js
 import Search from "./Search";
 
 
-function TasksPage() {
+const TasksPage = () => {
   return (
     <Container>
       <Header title="Lista zadań" />

@@ -32,6 +32,6 @@ export const StyledNavLink = styled(NavLink)`
   cursor: pointer;
 
   &.active {
-    color: ${({ theme }) => theme.color.black};
+    font-weight: bold;
   }
 `;
