@@ -16,13 +16,17 @@ const TaskPage = () => {
       <Section
         title={task ? task.content : "Nie znaleziono zadania"}
         body={
-          <TaskInfo>
-            <strong>Ukończono: </strong> {task.done ? "tak" : "nie"}
-          </TaskInfo>
+          task ? (
+            <TaskInfo>
+              <strong>Ukończono: </strong> {task.done ? "tak" : "nie"}
+            </TaskInfo>
+          ) : (
+            ""
+          )
         }
       />
     </Container>
   );
-}
+};
 
 export default TaskPage;
