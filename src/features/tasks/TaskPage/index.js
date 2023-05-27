@@ -16,12 +16,10 @@ const TaskPage = () => {
       <Section
         title={task ? task.content : "Nie znaleziono zadania"}
         body={
-          task ? (
+          !!task && (
             <TaskInfo>
               <strong>Ukończono: </strong> {task.done ? "tak" : "nie"}
             </TaskInfo>
-          ) : (
-            ""
           )
         }
       />

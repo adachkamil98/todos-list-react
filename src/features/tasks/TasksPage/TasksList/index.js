@@ -9,6 +9,7 @@ import { List, Item, TaskContent, Button } from "../styled.js";
 import { TaskLink } from "./styled.js";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min.js";
 import searchQueryParamName from "../searchQueryParamName.js";
+import { toTask } from "../../../../routes.js";
 
 const TasksList = () => {
   const location = useLocation();
@@ -28,7 +29,7 @@ const TasksList = () => {
             {task.done ? "✔" : ""}
           </Button>
           <TaskContent done={task.done}>
-            <TaskLink to={`/zadania/${task.id}`}>{task.content}</TaskLink>
+            <TaskLink to={toTask({ id: task.id })}>{task.content}</TaskLink>
           </TaskContent>
           <Button clear onClick={() => dispatch(removeTask(task.id))}>
             🗑️
